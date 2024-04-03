@@ -1,7 +1,6 @@
 import os
 import gradio as gr
-import cohere  
-
+import cohere
 
 
 COHERE_KEY = os.getenv('COHERE_KEY')
@@ -24,14 +23,18 @@ def convert_history(list_history):
 
 def reply(message:str, history:list):
     chat_history = convert_history(history)
-    response = co.chat(
+    response = co.chat_stream(
         message=message,
         chat_history=chat_history,
         model="command-nightly",
         temperature=0.25
     )
-    answer = response.text
-    return answer
+    text_so_far = ""
+    for event in response:
+        if event.event_type == 'text-generation':
+            text_so_far += event.text
+            yield text_so_far
+
 
 
 
