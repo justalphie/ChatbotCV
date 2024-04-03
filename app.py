@@ -41,4 +41,7 @@ def reply(message:str, history:list):
 
 
 
-gr.ChatInterface(reply).launch()
+gr.ChatInterface(reply,
+    title="Alfiya's Curriculum Vitae",
+    description="Hello! Use the text box below to ask questions about me and my work experience. 🗣️ Talk to me in English, Dutch, or French."
+).launch()
