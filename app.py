@@ -40,8 +40,22 @@ def reply(message:str, history:list):
 
 
 
+description = """
+<a href="https://www.linkedin.com/in/alfiya-khabibullina-7b13131b8/"><img src="https://media.licdn.com/dms/image/D4E35AQH3_TsZdDJqgQ/profile-framedphoto-shrink_400_400/0/1700140203397?e=1712768400&v=beta&t=zHg5UKxtG4sKD3tvV-0ojW-gsG8-QoJK672NklxdEBk" width="100" style="
+    float: right;
+    position: relative;
+    top: -65px;
+    right: 0px;
+    width: 100px;
+    border-radius: 100%;
+"/></a>
+Hello! 
+💬 Use the text box below to ask questions about me and my work experience.
+<nobr> 🗣️ Talk to me in English, Dutch, or French. </nobr>
+<nobr> 🔗 [Check my LinkedIn profile!](https://www.linkedin.com/in/alfiya-khabibullina-7b13131b8/) </nobr>
+"""
 
 gr.ChatInterface(reply,
     title="Alfiya's Curriculum Vitae",
-    description="Hello! Use the text box below to ask questions about me and my work experience. 🗣️ Talk to me in English, Dutch, or French."
+    description=description
 ).launch()
