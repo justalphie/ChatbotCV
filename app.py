@@ -8,6 +8,10 @@ co = cohere.Client(COHERE_KEY)
 
 #list_history = [["question", "answer"], ["how", "how what..."]]
 def convert_history(list_history):
+    """
+    Applies the prompt.
+    Converts the chat history structure taken by Gradio to the structure suitable for Cohere.
+    """
     chat_history = [
         {"role": "SYSTEM", "text": open("prompt.md","r",encoding="UTF-8").read()}
     ]
@@ -22,6 +26,9 @@ def convert_history(list_history):
 
 
 def reply(message:str, history:list):
+    """
+    Takes the input message of the user and chat history and streams the reply of the chatbot.
+    """
     chat_history = convert_history(history)
     response = co.chat_stream(
         message=message,
