@@ -42,5 +42,5 @@ If you would like to create a similar chatbot for your own CV, you will need to 
 
 ## Contact
 The author of the project is Alfiya Khabibullina.
-To reach out for support or further information, ideas or suggestions, please contact [Alfiya Khabibullina](https://github.com/justalphie). 
-[My LinkedIn profile](https://www.linkedin.com/in/alfiya-khabibullina-7b13131b8/)
+
+To reach out for support or further information, ideas or suggestions, please contact [me on github](https://github.com/justalphie) or [find me on LinkedIn](https://www.linkedin.com/in/alfiya-khabibullina-7b13131b8/)
